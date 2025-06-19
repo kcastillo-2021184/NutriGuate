@@ -57,3 +57,33 @@ export const updatePasswordValidator = [
         .isLength({min: 8}),
         validateErrorWithoutImg
 ]
+
+export const dietValidator = [
+  body('edad', 'Edad es requerida y debe ser un número positivo')
+    .notEmpty()
+    .isInt({ min: 1, max: 120 }), // La edad debe ser un número entero positivo
+  body('genero', 'Género es requerido')
+    .notEmpty()
+    .isIn(['masculino', 'femenino']), // Validar que el género esté en una lista de opciones
+  body('peso', 'Peso es requerido y debe ser un número positivo')
+    .notEmpty()
+    .isFloat({ min: 1 }), // Validar que el peso sea un número mayor a 0
+  body('altura', 'Altura es requerida y debe ser un número positivo')
+    .notEmpty()
+    .isFloat({ min: 1 }), // Validar que la altura sea un número mayor a 0
+  body('actividadFisica', 'Actividad física es requerida')
+    .notEmpty()
+    .isIn(['Sedentario', 'Ligera', 'Moderada', 'Intensa', 'Alto Rendimiento']), // Validar actividad física
+  body('presupuestoMensual', 'Presupuesto mensual es requerido y debe ser un número positivo')
+    .notEmpty()
+    .isFloat({ min: 1 }), // Validar que el presupuesto sea un número positivo
+  validateErrorWithoutImg
+]
+
+export const commentValidator = [
+    body('author', 'Author cannot be empty')
+        .notEmpty(),
+    body('content', 'Content cannot be empty')
+        .notEmpty(),
+    validateErrorWithoutImg
+]

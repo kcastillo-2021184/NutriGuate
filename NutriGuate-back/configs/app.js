@@ -3,11 +3,11 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import multer from 'multer';
-/*
 import authRoutes from '../src/auth/auth.routes.js';
 import userRoutes from '../src/user/user.routes.js';
+import dietRoutes from '../src/diet/diet.routes.js';
+import reviewRoutes from '../src/review/review.routes.js';
 import {initializeAdmin} from '../src/user/user.controller.js'
-*/
 import { limiter } from '../middlewares/rate.limit.js';
 
 const upload = multer();
@@ -25,12 +25,8 @@ const configs = (app) => {
 const routes = (app) => {
     app.use('/api/auth', authRoutes)
     app.use('/v1/user', userRoutes)
-    app.use('/v1/room', roomRoutes)
-    app.use('/v1/hotel', hotelRoutes)
-    app.use('/v1/service', serviceRoutes)
-    app.use('/v1/reservation', reservationRoutes)
-    app.use('/v1/bill', billRoutes)
-    app.use('/v1/event', eventsRoutes)
+    app.use('/v1/diet', dietRoutes)
+    app.use('/v1/review', reviewRoutes)
 };
 
 export const initServer = async () => {
@@ -45,4 +41,4 @@ export const initServer = async () => {
     }
 };
 
-//initializeAdmin()
+initializeAdmin()
