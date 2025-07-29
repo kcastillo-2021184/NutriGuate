@@ -1,0 +1,43 @@
+{
+  "name": "nutriguate-back",
+  "version": "1.0.0",
+  "description": "Aplicacion Web la cual permita a las familias guatemaltecas poder acceder de una manera fácil y gratuita a recetas saludables y económicas, información nutricional adaptada a su alcance, y un sistema de localización de ferias agrícolas, huertos comunitarios y centros de apoyo nutricional cercanos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcastillo-2021184/NutriGuate.git"
+  },
+  "keywords": [
+    "report",
+    "food",
+    "diet"
+  ],
+  "author": "Forti Kid's",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kcastillo-2021184/NutriGuate/issues"
+  },
+  "homepage": "https://github.com/kcastillo-2021184/NutriGuate#readme",
+  "dependencies": {
+    "argon2": "^0.43.0",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "gitignore": "^0.7.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.1",
+    "node-fetch": "^3.3.2",
+    "pdfkit": "^0.17.1"
+  },
+  "type": "module"
+}
